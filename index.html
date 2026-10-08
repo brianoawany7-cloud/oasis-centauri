@@ -5,74 +5,80 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
 <meta name="author" content="Oasis Centauri">
-<meta name="theme-color" content="#14395E">
+<meta name="theme-color" content="#0A1018">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Oasis Centauri">
 <meta property="og:title" content="Oasis Centauri — Youth Precision Irrigation Project">
 <meta property="og:description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://brianoawany7-cloud.github.io/oasis-centauri/logo.webp">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oasis Centauri — Youth Precision Irrigation Project">
 <meta name="twitter:description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5c4.2 5 7 8.6 7 12a7 7 0 0 1-14 0c0-3.4 2.8-7 7-12z' fill='%231B7FC4'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%23FDFCF8'/%3E%3Ccircle cx='12' cy='12' r='11' fill='none' stroke='%23273E6B' stroke-width='1.6'/%3E%3Ccircle cx='12' cy='12' r='6.4' fill='none' stroke='%23273E6B' stroke-width='3.2'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="logo.webp">
 <title>Oasis Centauri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-/* Layout: a field datasheet — one measured column of evidence, with the water-efficiency
-   comparison as the single bold moment. Everything else quiet and instrument-like. */
+/* Dark field datasheet. One measured column of evidence; the water-efficiency
+   comparison is the single bright moment. Palette drawn from the Oasis Centauri
+   seal: deep navy ground, water blue, desert sun, leaf, earth. */
 :root{
-  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#15212B; --muted:#5B6873; --line:#E2E0D8;
-  --navy:#14395E; --water:#1B7FC4; --sun:#B87914; --leaf:#2E7D32; --earth:#8A5A34;
-  --shade:#F3F1EA; --ok:#2E7D32; --wait:#8A8372;
+  color-scheme:dark;
+  --bg:#0A1018; --bg2:#0D161F; --surface:#111D28; --raise:#16232F;
+  --line:#22323F; --line2:#2E4252;
+  --ink:#E9EFF4; --muted:#96A8B7;
+  --navy:#273E6B; --panel:#13233E;
+  --water:#4FA8E8; --sun:#E9A93F; --leaf:#5FBF6A; --earth:#C08A54;
   --display:'Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'Source Serif 4',Georgia,'Times New Roman',serif;
   --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
 }
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
-  --bg:#0E151B; --surface:#141F28; --ink:#E8EDF0; --muted:#9AA7B1; --line:#263340;
-  --navy:#8FBCE6; --water:#5BB0EE; --sun:#E8A82E; --leaf:#6FC274; --earth:#C49466;
-  --shade:#182430; --ok:#6FC274; --wait:#9AA7B1; color-scheme:dark;
-}}
-:root[data-theme="dark"]{
-  --bg:#0E151B; --surface:#141F28; --ink:#E8EDF0; --muted:#9AA7B1; --line:#263340;
-  --navy:#8FBCE6; --water:#5BB0EE; --sun:#E8A82E; --leaf:#6FC274; --earth:#C49466;
-  --shade:#182430; --ok:#6FC274; --wait:#9AA7B1; color-scheme:dark;
-}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;margin:0}
+html,body{margin:0;padding:0}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
-h1,h2,h3,.lbl,.num,nav,.chip,.btn{font-family:var(--display)}
+h1,h2,h3,.lbl,.num,nav,.chip,.btn,.brand{font-family:var(--display)}
 h1,h2,h3{text-wrap:balance;margin:0;letter-spacing:-.02em}
 p{margin:0}
 a{color:inherit}
 
 /* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.topin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:13px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;
-  letter-spacing:.14em;font-size:13px;text-transform:uppercase;color:var(--navy);text-decoration:none}
+.top{position:sticky;top:0;z-index:20;background:rgba(10,16,24,.82);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:11px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.14em;font-size:13px;
+  text-transform:uppercase;color:var(--ink);text-decoration:none}
+.brand img{width:38px;height:38px;border-radius:50%;flex:0 0 auto;
+  box-shadow:0 0 0 1px rgba(233,239,244,.14), 0 2px 10px rgba(0,0,0,.5)}
 nav{display:flex;gap:20px;font-size:13px;font-weight:600;letter-spacing:.02em}
 nav a{color:var(--muted);text-decoration:none;padding-block:4px;border-bottom:2px solid transparent}
 nav a:hover,nav a:focus-visible{color:var(--ink);border-bottom-color:var(--sun)}
-@media(max-width:720px){nav{display:none}}
+@media(max-width:780px){nav{display:none}}
 
 /* hero */
-.hero{padding-block:72px 56px;border-bottom:1px solid var(--line)}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.hero{position:relative;padding-block:74px 58px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40% -10% auto -10%;height:120%;pointer-events:none;
+  background:radial-gradient(60% 55% at 22% 32%, rgba(79,168,232,.17), transparent 68%),
+             radial-gradient(48% 45% at 84% 16%, rgba(233,169,63,.11), transparent 70%)}
+.hero>*{position:relative}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--water)}
 h1{font-size:clamp(34px,6vw,60px);line-height:1.02;font-weight:800;margin-block:18px 20px;max-width:17ch}
 .lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:60ch}
-.heroGrid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
-@media(max-width:860px){.heroGrid{grid-template-columns:1fr;gap:28px}}
-.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+.heroGrid{display:grid;grid-template-columns:1fr auto;gap:44px;align-items:end}
+@media(max-width:880px){.heroGrid{grid-template-columns:1fr;gap:30px}}
+.facts{display:flex;gap:30px;flex-wrap:wrap;margin-top:32px}
 .fact{min-width:0}
-.fact .num{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--navy);display:block;font-variant-numeric:tabular-nums}
+.fact .num{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--water);display:block;
+  font-variant-numeric:tabular-nums}
 .fact .cap{font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
 /* drip mark */
 .mark{width:132px;height:188px;flex:0 0 auto}
-@media(max-width:860px){.mark{display:none}}
+@media(max-width:880px){.mark{display:none}}
 @keyframes fall{0%{transform:translateY(0);opacity:0}12%{opacity:1}72%{transform:translateY(74px);opacity:1}86%{transform:translateY(74px);opacity:0}100%{opacity:0}}
 .drop{animation:fall 3.4s cubic-bezier(.45,.05,.75,.4) infinite}
 .drop:nth-of-type(2){animation-delay:1.13s}
@@ -80,23 +86,25 @@ h1{font-size:clamp(34px,6vw,60px);line-height:1.02;font-weight:800;margin-block:
 @media(prefers-reduced-motion:reduce){.drop{animation:none;opacity:.9}}
 
 /* sections */
-section{padding-block:64px;border-bottom:1px solid var(--line)}
+section{padding-block:66px;border-bottom:1px solid var(--line)}
+.tint{background:var(--bg2)}
 .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);
   display:block;margin-bottom:14px}
-h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch}
+h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch;line-height:1.17}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
-@media(max-width:860px){.two{grid-template-columns:1fr;gap:28px}}
+@media(max-width:880px){.two{grid-template-columns:1fr;gap:30px}}
 .prose p+p{margin-top:16px}
-.prose{max-width:62ch}
+.prose{max-width:62ch;color:#CBD7E0}
 
 /* efficiency figure */
-.fig{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 26px 22px}
-.figcap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:18px;line-height:1.5}
+.fig{background:var(--surface);border:1px solid var(--line2);border-radius:6px;padding:30px 26px 22px;
+  box-shadow:0 18px 44px rgba(0,0,0,.34)}
+.figcap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:18px;line-height:1.55}
 .bars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:end;height:250px}
 .bar{display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-width:0}
-.track{position:relative;background:var(--shade);border-radius:3px 3px 0 0;overflow:hidden}
-.fill{position:absolute;left:0;right:0;bottom:0;border-radius:3px 3px 0 0}
-.pct{font-family:var(--mono);font-size:clamp(19px,3.6vw,27px);font-weight:600;color:#fff;
+.track{position:relative;background:var(--raise);border-radius:4px 4px 0 0;overflow:hidden}
+.fill{position:absolute;left:0;right:0;bottom:0;border-radius:4px 4px 0 0}
+.pct{font-family:var(--mono);font-size:clamp(19px,3.6vw,27px);font-weight:600;color:#08121C;
   position:absolute;left:0;right:0;top:10px;text-align:center;font-variant-numeric:tabular-nums}
 .bname{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
   text-align:center;margin-top:11px;color:var(--ink)}
@@ -106,15 +114,14 @@ h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch}
 .stage{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:18px;align-items:start;
   padding-block:20px;border-top:1px solid var(--line)}
 .stage:first-of-type{border-top:0}
-.sn{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
-.sh{font-family:var(--display);font-weight:700;font-size:17.5px;margin-bottom:5px}
+.sn{font-family:var(--mono);font-size:12.5px;color:var(--water);padding-top:3px;font-variant-numeric:tabular-nums}
+.sh{font-family:var(--display);font-weight:700;font-size:17.5px;margin-bottom:5px;line-height:1.3}
 .sd{color:var(--muted);font-size:15.5px;max-width:58ch}
 .chip{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;
   border-radius:100px;white-space:nowrap;border:1px solid}
-.chip.done{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 42%,transparent);
-  background:color-mix(in srgb,var(--ok) 9%,transparent)}
-.chip.next{color:var(--wait);border-color:var(--line);background:var(--shade)}
-@media(max-width:640px){.stage{grid-template-columns:30px minmax(0,1fr);gap:12px}
+.chip.done{color:var(--leaf);border-color:rgba(95,191,106,.42);background:rgba(95,191,106,.11)}
+.chip.next{color:var(--muted);border-color:var(--line2);background:var(--raise)}
+@media(max-width:640px){.stage{grid-template-columns:28px minmax(0,1fr);gap:12px}
   .chip{grid-column:2;justify-self:start;margin-top:8px}}
 
 /* spec table */
@@ -125,38 +132,43 @@ h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch}
 .spec td{font-family:var(--mono);font-size:14px;color:var(--ink)}
 
 /* people */
-.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;margin-top:26px}
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;margin-top:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 20px 22px}
 .pname{font-family:var(--display);font-weight:700;font-size:17px}
 .prole{font-family:var(--mono);font-size:12px;color:var(--sun);letter-spacing:.05em;margin-top:3px}
-.pbio{color:var(--muted);font-size:15.5px;margin-top:9px}
+.pbio{color:var(--muted);font-size:15.5px;margin-top:10px}
 
 /* contact */
-.cta{background:var(--navy);color:#fff;border-radius:5px;padding:38px 34px}
-:root[data-theme="dark"] .cta,
-:root:not([data-theme="light"]) .cta{background:#102A44}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .cta{background:var(--navy)}}
+.cta{background:linear-gradient(152deg,#17294A 0%,#102039 58%,#0D1A2E 100%);
+  border:1px solid #2A4268;border-radius:8px;padding:40px 34px;
+  box-shadow:0 22px 56px rgba(0,0,0,.42)}
 .cta h2{color:#fff;max-width:20ch}
-.cta p{color:#CBDCEC;margin-top:12px;max-width:52ch}
-.rows{margin-top:26px;display:grid;gap:14px}
+.cta p{color:#B7CBDD;margin-top:12px;max-width:52ch}
+.rows{margin-top:28px;display:grid;gap:14px}
 .row{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
-.rk{font-family:var(--display);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#8FB4D4;width:74px;flex:0 0 auto}
-.rv{font-family:var(--mono);font-size:15px;color:#fff;word-break:break-all}
-.btn{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 12px;border-radius:3px;
-  border:1px solid #4E7CA6;background:transparent;color:#CBDCEC;cursor:pointer}
-.btn:hover{background:#1B4467;color:#fff}
+.rk{font-family:var(--display);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#7FA3C6;
+  width:74px;flex:0 0 auto}
+.rv{font-family:var(--mono);font-size:15px;color:#fff;word-break:break-word}
+.btn{font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:6px 12px;border-radius:4px;border:1px solid #3E6490;background:transparent;color:#BBD2E6;cursor:pointer}
+.btn:hover{background:#1D3557;color:#fff;border-color:#5886B5}
 
-footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
-.fline{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;line-height:1.7}
+/* footer */
+footer{padding-block:38px 46px;color:var(--muted);font-size:13.5px}
+.foot{display:flex;gap:20px;align-items:flex-start}
+.seal{width:76px;height:76px;border-radius:50%;flex:0 0 auto;opacity:.95;
+  box-shadow:0 0 0 1px rgba(233,239,244,.12), 0 6px 20px rgba(0,0,0,.5)}
+@media(max-width:560px){.foot{flex-direction:column;gap:16px}}
+.fline{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;line-height:1.75}
 :focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:2px}
+::selection{background:rgba(79,168,232,.3)}
 </style>
-<style>html,body{margin:0;padding:0}img{max-width:100%}:root{color-scheme:light dark}</style>
 </head>
 <body>
 
-
 <header class="top"><div class="wrap topin">
   <a class="brand" href="#top">
-    <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c4.2 5 7 8.6 7 12a7 7 0 0 1-14 0c0-3.4 2.8-7 7-12z" fill="currentColor"/></svg>
+    <img src="logo.webp" width="38" height="38" alt="Oasis Centauri">
     Oasis Centauri
   </a>
   <nav>
@@ -171,7 +183,7 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
 
 <main id="top">
 
-<div class="wrap hero"><div class="heroGrid">
+<div class="hero"><div class="wrap heroGrid">
   <div>
     <span class="eyebrow">Abim District · Karamoja · Uganda</span>
     <h1>Proving precision irrigation where the rain has stopped being reliable.</h1>
@@ -184,18 +196,18 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
     </div>
   </div>
   <svg class="mark" viewBox="0 0 132 188" aria-hidden="true">
-    <rect x="6" y="18" width="120" height="7" rx="3.5" fill="var(--water)"/>
-    <circle cx="30" cy="22" r="4.5" fill="var(--navy)"/><circle cx="66" cy="22" r="4.5" fill="var(--navy)"/><circle cx="102" cy="22" r="4.5" fill="var(--navy)"/>
-    <g class="drop"><path d="M30 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
-    <g class="drop"><path d="M66 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
-    <g class="drop"><path d="M102 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
-    <rect x="0" y="118" width="132" height="2.6" fill="var(--earth)"/>
-    <ellipse cx="30" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
-    <ellipse cx="66" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
-    <ellipse cx="102" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
-    <path d="M30 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="28.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
-    <path d="M66 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="64.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
-    <path d="M102 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="100.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
+    <rect x="6" y="18" width="120" height="7" rx="3.5" fill="#4FA8E8"/>
+    <circle cx="30" cy="22" r="4.5" fill="#8FBCE6"/><circle cx="66" cy="22" r="4.5" fill="#8FBCE6"/><circle cx="102" cy="22" r="4.5" fill="#8FBCE6"/>
+    <g class="drop"><path d="M30 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="#4FA8E8"/></g>
+    <g class="drop"><path d="M66 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="#4FA8E8"/></g>
+    <g class="drop"><path d="M102 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="#4FA8E8"/></g>
+    <rect x="0" y="118" width="132" height="2.6" fill="#C08A54"/>
+    <ellipse cx="30" cy="140" rx="13" ry="20" fill="#4FA8E8" opacity=".3"/>
+    <ellipse cx="66" cy="140" rx="13" ry="20" fill="#4FA8E8" opacity=".3"/>
+    <ellipse cx="102" cy="140" rx="13" ry="20" fill="#4FA8E8" opacity=".3"/>
+    <path d="M30 118c-7-9 0-16 0-16s7 7 0 16z" fill="#5FBF6A"/><rect x="28.6" y="114" width="2.8" height="30" fill="#5FBF6A"/>
+    <path d="M66 118c-7-9 0-16 0-16s7 7 0 16z" fill="#5FBF6A"/><rect x="64.6" y="114" width="2.8" height="30" fill="#5FBF6A"/>
+    <path d="M102 118c-7-9 0-16 0-16s7 7 0 16z" fill="#5FBF6A"/><rect x="100.6" y="114" width="2.8" height="30" fill="#5FBF6A"/>
   </svg>
 </div></div>
 
@@ -211,7 +223,7 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
   </div>
 </div></section>
 
-<section id="approach"><div class="wrap two">
+<section id="approach" class="tint"><div class="wrap two">
   <div>
     <span class="lbl">Approach</span>
     <h2>Put the water at the root, and run it on the sun.</h2>
@@ -223,9 +235,9 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
   </div>
   <div class="fig">
     <div class="bars">
-      <div class="bar"><div class="track" style="height:60%"><div class="fill" style="height:100%;background:var(--earth)"></div><span class="pct">60%</span></div><div class="bname">Surface</div><div class="bsub">furrow, basin, flood</div></div>
-      <div class="bar"><div class="track" style="height:75%"><div class="fill" style="height:100%;background:var(--water)"></div><span class="pct">75%</span></div><div class="bname">Sprinkler</div><div class="bsub">overhead spray</div></div>
-      <div class="bar"><div class="track" style="height:90%"><div class="fill" style="height:100%;background:var(--leaf)"></div><span class="pct">90%</span></div><div class="bname">Drip</div><div class="bsub">emitter at the plant</div></div>
+      <div class="bar"><div class="track" style="height:60%"><div class="fill" style="height:100%;background:#C08A54"></div><span class="pct">60%</span></div><div class="bname">Surface</div><div class="bsub">furrow, basin, flood</div></div>
+      <div class="bar"><div class="track" style="height:75%"><div class="fill" style="height:100%;background:#4FA8E8"></div><span class="pct">75%</span></div><div class="bname">Sprinkler</div><div class="bsub">overhead spray</div></div>
+      <div class="bar"><div class="track" style="height:90%"><div class="fill" style="height:100%;background:#5FBF6A"></div><span class="pct">90%</span></div><div class="bname">Drip</div><div class="bsub">emitter at the plant</div></div>
     </div>
     <p class="figcap">Field application efficiency — the share of water applied that actually reaches the crop root zone. Source: FAO, <em>Irrigation Water Management</em>, Table 8.</p>
   </div>
@@ -254,7 +266,7 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
   </div>
 </div></section>
 
-<section id="progress"><div class="wrap">
+<section id="progress" class="tint"><div class="wrap">
   <span class="lbl">Progress</span>
   <h2 style="margin-bottom:30px">Four stages, delivered against a signed schedule.</h2>
 
@@ -299,22 +311,22 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
   </div>
 </div></section>
 
-<section id="team"><div class="wrap">
+<section id="team" class="tint"><div class="wrap">
   <span class="lbl">Who we are</span>
   <h2>A student project that went to the field.</h2>
   <div class="prose" style="margin-top:18px">
     <p>Oasis Centauri was founded by students of Makerere University, where the precision drip system was first built and tested. It is now implementing that prototype as a funded pilot in Karamoja.</p>
   </div>
   <div class="who">
-    <div><div class="pname">Brian Awany</div><div class="prole">Project Manager · Innovator</div><div class="pbio">Leads the project and holds the agreement with UNDP as named Innovator.</div></div>
-    <div><div class="pname">Koko Alex</div><div class="prole">Field Team Lead</div><div class="pbio">Runs operations on the ground in Abim and leads the youth training.</div></div>
-    <div><div class="pname">Field team</div><div class="prole">Agricultural extension</div><div class="pbio">Field assistants supporting mobilisation, facilitation and field data collection.</div></div>
+    <div class="card"><div class="pname">Brian Awany</div><div class="prole">Project Manager · Innovator</div><div class="pbio">Leads the project and holds the agreement with UNDP as named Innovator.</div></div>
+    <div class="card"><div class="pname">Koko Alex</div><div class="prole">Field Team Lead</div><div class="pbio">Runs operations on the ground in Abim and leads the youth training.</div></div>
+    <div class="card"><div class="pname">Field team</div><div class="prole">Agricultural extension</div><div class="pbio">Field assistants supporting mobilisation, facilitation and field data collection.</div></div>
   </div>
 </div></section>
 
 <section id="contact" style="border-bottom:0"><div class="wrap">
   <div class="cta">
-    <span class="lbl" style="color:#E8A82E">Contact</span>
+    <span class="lbl" style="color:#E9A93F">Contact</span>
     <h2>Partners, funders and researchers — we would like to hear from you.</h2>
     <p>We are open to technical collaboration, follow-on funding, and anyone studying smallholder irrigation in semi-arid East Africa.</p>
     <div class="rows">
@@ -328,10 +340,13 @@ footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
 
 </main>
 
-<footer><div class="wrap">
-  <p class="fline">Oasis Centauri · Youth Precision Irrigation Project · Kampala, Uganda</p>
-  <p class="fline">Supported under the Youth4Climate Call for Solutions Innovation Challenge (UNDP) · Agreement No. 10576419</p>
-  <p class="fline" style="margin-top:12px;opacity:.8">The views expressed on this site are those of Oasis Centauri and do not necessarily reflect those of UNDP.</p>
+<footer><div class="wrap foot">
+  <img class="seal" src="logo.webp" width="76" height="76" alt="" aria-hidden="true">
+  <div>
+    <p class="fline">Oasis Centauri · Youth Precision Irrigation Project · Kampala, Uganda</p>
+    <p class="fline">Supported under the Youth4Climate Call for Solutions Innovation Challenge (UNDP) · Agreement No. 10576419</p>
+    <p class="fline" style="margin-top:12px;opacity:.78">The views expressed on this site are those of Oasis Centauri and do not necessarily reflect those of UNDP.</p>
+  </div>
 </div></footer>
 
 <script>
