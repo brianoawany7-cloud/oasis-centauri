@@ -153,6 +153,17 @@ h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch;line-height:1
   padding:6px 12px;border-radius:4px;border:1px solid #3E6490;background:transparent;color:#BBD2E6;cursor:pointer}
 .btn:hover{background:#1D3557;color:#fff;border-color:#5886B5}
 
+/* field photographs */
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;margin-top:30px}
+.shot{margin:0}
+.shot.wide{grid-column:1/-1}
+.stack{display:grid;gap:20px;min-width:0}
+.shot img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line2);
+  box-shadow:0 14px 34px rgba(0,0,0,.4);background:var(--raise)}
+.shot figcaption{font-family:var(--mono);font-size:11.5px;line-height:1.55;color:var(--muted);
+  margin-top:10px;letter-spacing:.02em}
+@media(max-width:700px){.shots{grid-template-columns:1fr;gap:26px}.stack{gap:26px}}
+
 /* footer */
 footer{padding-block:38px 46px;color:var(--muted);font-size:13.5px}
 .foot{display:flex;gap:20px;align-items:flex-start}
@@ -176,6 +187,7 @@ footer{padding-block:38px 46px;color:var(--muted);font-size:13.5px}
     <a href="#approach">Approach</a>
     <a href="#pilot">The pilot</a>
     <a href="#progress">Progress</a>
+    <a href="#field">From the field</a>
     <a href="#team">Who we are</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -273,7 +285,7 @@ footer{padding-block:38px 46px;color:var(--muted);font-size:13.5px}
   <div class="stage">
     <div class="sn">01</div>
     <div><div class="sh">Community sensitisation and capacity building</div>
-      <div class="sd">Clearance secured from sub-county to village level. Youth mobilised across three neighbouring villages in one parish, and trained over two days on the principles of irrigation, solar drip systems and climate-smart agriculture. Abim, 30 September – 1 October 2026.</div></div>
+      <div class="sd">Field team aligned and deployed, then clearance secured step by step from sub-county to parish to village level, with community leaders endorsing the project in writing. Youth mobilised across three neighbouring villages in one parish and trained over two days on climate-smart agriculture and the principles and practice of precision drip irrigation — closing with a certificate for every participant. Abim, 30 September – 1 October 2026.</div></div>
     <span class="chip done">Complete</span>
   </div>
 
@@ -296,6 +308,38 @@ footer{padding-block:38px 46px;color:var(--muted);font-size:13.5px}
     <div><div class="sh">Monitoring, evaluation and scaling readiness</div>
       <div class="sd">Digital monitoring of system performance and beneficiary outcomes, stakeholder assessment, and a scaling readiness guide drawn from what the pilot actually shows.</div></div>
     <span class="chip next">By Apr 2028</span>
+  </div>
+</div></section>
+
+<section id="field"><div class="wrap">
+  <span class="lbl">From the field</span>
+  <h2>Output 1, on the ground in Abim.</h2>
+  <div class="prose" style="margin-top:18px">
+    <p>Two months of work, photographed as it happened: the landscape the pilot is built for, the team that ran the engagement, and the youth who completed the training.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot wide">
+      <img src="field-abim.webp" width="880" height="453" loading="lazy" decoding="async"
+           alt="Open grassland with scattered trees and hills on the horizon, Abim District, Karamoja.">
+      <figcaption>Abim District, Karamoja — the landscape this pilot is built for. Rain here arrives in two short, uncertain windows a year.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="team-abim.webp" width="520" height="532" loading="lazy" decoding="async"
+           alt="Two members of the Oasis Centauri field team in high-visibility vests standing with three community leaders outside the training venue.">
+      <figcaption>The field team with community leaders at the training venue, during the stakeholder engagement and endorsement stage.</figcaption>
+    </figure>
+    <div class="stack">
+    <figure class="shot">
+      <img src="training-group.webp" width="760" height="393" loading="lazy" decoding="async"
+           alt="A large group of young participants and field team members in high-visibility vests outside the training venue.">
+      <figcaption>Youth mobilised from three neighbouring villages in one parish, with the field team, at the two-day training.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="certificates.webp" width="760" height="342" loading="lazy" decoding="async"
+           alt="Participants holding up their training certificates outside the venue at the close of the two-day training.">
+      <figcaption>Certificates awarded at the close of the two-day training on climate-smart agriculture and precision drip irrigation.</figcaption>
+    </figure>
+    </div>
   </div>
 </div></section>
 
