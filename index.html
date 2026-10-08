@@ -1,0 +1,354 @@
+TESTLINE1
+TESTLINE2<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
+<meta name="author" content="Oasis Centauri">
+<meta name="theme-color" content="#14395E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Oasis Centauri">
+<meta property="og:title" content="Oasis Centauri — Youth Precision Irrigation Project">
+<meta property="og:description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oasis Centauri — Youth Precision Irrigation Project">
+<meta name="twitter:description" content="Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in Abim District, Karamoja, Uganda, and training young people on the system while it runs.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5c4.2 5 7 8.6 7 12a7 7 0 0 1-14 0c0-3.4 2.8-7 7-12z' fill='%231B7FC4'/%3E%3C/svg%3E">
+<title>Oasis Centauri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: a field datasheet — one measured column of evidence, with the water-efficiency
+   comparison as the single bold moment. Everything else quiet and instrument-like. */
+:root{
+  --bg:#FBFAF6; --surface:#FFFFFF; --ink:#15212B; --muted:#5B6873; --line:#E2E0D8;
+  --navy:#14395E; --water:#1B7FC4; --sun:#B87914; --leaf:#2E7D32; --earth:#8A5A34;
+  --shade:#F3F1EA; --ok:#2E7D32; --wait:#8A8372;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#0E151B; --surface:#141F28; --ink:#E8EDF0; --muted:#9AA7B1; --line:#263340;
+  --navy:#8FBCE6; --water:#5BB0EE; --sun:#E8A82E; --leaf:#6FC274; --earth:#C49466;
+  --shade:#182430; --ok:#6FC274; --wait:#9AA7B1; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0E151B; --surface:#141F28; --ink:#E8EDF0; --muted:#9AA7B1; --line:#263340;
+  --navy:#8FBCE6; --water:#5BB0EE; --sun:#E8A82E; --leaf:#6FC274; --earth:#C49466;
+  --shade:#182430; --ok:#6FC274; --wait:#9AA7B1; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+h1,h2,h3,.lbl,.num,nav,.chip,.btn{font-family:var(--display)}
+h1,h2,h3{text-wrap:balance;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:13px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;
+  letter-spacing:.14em;font-size:13px;text-transform:uppercase;color:var(--navy);text-decoration:none}
+nav{display:flex;gap:20px;font-size:13px;font-weight:600;letter-spacing:.02em}
+nav a{color:var(--muted);text-decoration:none;padding-block:4px;border-bottom:2px solid transparent}
+nav a:hover,nav a:focus-visible{color:var(--ink);border-bottom-color:var(--sun)}
+@media(max-width:720px){nav{display:none}}
+
+/* hero */
+.hero{padding-block:72px 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.02;font-weight:800;margin-block:18px 20px;max-width:17ch}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:60ch}
+.heroGrid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+@media(max-width:860px){.heroGrid{grid-template-columns:1fr;gap:28px}}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px}
+.fact{min-width:0}
+.fact .num{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--navy);display:block;font-variant-numeric:tabular-nums}
+.fact .cap{font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* drip mark */
+.mark{width:132px;height:188px;flex:0 0 auto}
+@media(max-width:860px){.mark{display:none}}
+@keyframes fall{0%{transform:translateY(0);opacity:0}12%{opacity:1}72%{transform:translateY(74px);opacity:1}86%{transform:translateY(74px);opacity:0}100%{opacity:0}}
+.drop{animation:fall 3.4s cubic-bezier(.45,.05,.75,.4) infinite}
+.drop:nth-of-type(2){animation-delay:1.13s}
+.drop:nth-of-type(3){animation-delay:2.26s}
+@media(prefers-reduced-motion:reduce){.drop{animation:none;opacity:.9}}
+
+/* sections */
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+.lbl{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);
+  display:block;margin-bottom:14px}
+h2{font-size:clamp(25px,3.4vw,34px);font-weight:700;max-width:22ch}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:28px}}
+.prose p+p{margin-top:16px}
+.prose{max-width:62ch}
+
+/* efficiency figure */
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 26px 22px}
+.figcap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:18px;line-height:1.5}
+.bars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:end;height:250px}
+.bar{display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-width:0}
+.track{position:relative;background:var(--shade);border-radius:3px 3px 0 0;overflow:hidden}
+.fill{position:absolute;left:0;right:0;bottom:0;border-radius:3px 3px 0 0}
+.pct{font-family:var(--mono);font-size:clamp(19px,3.6vw,27px);font-weight:600;color:#fff;
+  position:absolute;left:0;right:0;top:10px;text-align:center;font-variant-numeric:tabular-nums}
+.bname{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
+  text-align:center;margin-top:11px;color:var(--ink)}
+.bsub{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin-top:3px}
+
+/* status list */
+.stage{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:18px;align-items:start;
+  padding-block:20px;border-top:1px solid var(--line)}
+.stage:first-of-type{border-top:0}
+.sn{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.sh{font-family:var(--display);font-weight:700;font-size:17.5px;margin-bottom:5px}
+.sd{color:var(--muted);font-size:15.5px;max-width:58ch}
+.chip{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;
+  border-radius:100px;white-space:nowrap;border:1px solid}
+.chip.done{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 42%,transparent);
+  background:color-mix(in srgb,var(--ok) 9%,transparent)}
+.chip.next{color:var(--wait);border-color:var(--line);background:var(--shade)}
+@media(max-width:640px){.stage{grid-template-columns:30px minmax(0,1fr);gap:12px}
+  .chip{grid-column:2;justify-self:start;margin-top:8px}}
+
+/* spec table */
+.spec{width:100%;border-collapse:collapse;font-size:15.5px}
+.spec th,.spec td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.spec th{font-family:var(--display);font-weight:600;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);width:44%;padding-right:18px}
+.spec td{font-family:var(--mono);font-size:14px;color:var(--ink)}
+
+/* people */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;margin-top:26px}
+.pname{font-family:var(--display);font-weight:700;font-size:17px}
+.prole{font-family:var(--mono);font-size:12px;color:var(--sun);letter-spacing:.05em;margin-top:3px}
+.pbio{color:var(--muted);font-size:15.5px;margin-top:9px}
+
+/* contact */
+.cta{background:var(--navy);color:#fff;border-radius:5px;padding:38px 34px}
+:root[data-theme="dark"] .cta,
+:root:not([data-theme="light"]) .cta{background:#102A44}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .cta{background:var(--navy)}}
+.cta h2{color:#fff;max-width:20ch}
+.cta p{color:#CBDCEC;margin-top:12px;max-width:52ch}
+.rows{margin-top:26px;display:grid;gap:14px}
+.row{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.rk{font-family:var(--display);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#8FB4D4;width:74px;flex:0 0 auto}
+.rv{font-family:var(--mono);font-size:15px;color:#fff;word-break:break-all}
+.btn{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 12px;border-radius:3px;
+  border:1px solid #4E7CA6;background:transparent;color:#CBDCEC;cursor:pointer}
+.btn:hover{background:#1B4467;color:#fff}
+
+footer{padding-block:34px 44px;color:var(--muted);font-size:13.5px}
+.fline{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;line-height:1.7}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:2px}
+</style>
+<style>html,body{margin:0;padding:0}img{max-width:100%}:root{color-scheme:light dark}</style>
+</head>
+<body>
+
+
+<header class="top"><div class="wrap topin">
+  <a class="brand" href="#top">
+    <svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c4.2 5 7 8.6 7 12a7 7 0 0 1-14 0c0-3.4 2.8-7 7-12z" fill="currentColor"/></svg>
+    Oasis Centauri
+  </a>
+  <nav>
+    <a href="#problem">The problem</a>
+    <a href="#approach">Approach</a>
+    <a href="#pilot">The pilot</a>
+    <a href="#progress">Progress</a>
+    <a href="#team">Who we are</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="top">
+
+<div class="wrap hero"><div class="heroGrid">
+  <div>
+    <span class="eyebrow">Abim District · Karamoja · Uganda</span>
+    <h1>Proving precision irrigation where the rain has stopped being reliable.</h1>
+    <p class="lede">Oasis Centauri is a youth-led venture testing solar-powered precision drip irrigation in one of Uganda's most climate-vulnerable regions — and training young people on the system while it runs.</p>
+    <div class="facts">
+      <div class="fact"><span class="num">2.5</span><span class="cap">acres under test</span></div>
+      <div class="fact"><span class="num">5</span><span class="cap">drip systems</span></div>
+      <div class="fact"><span class="num">90%</span><span class="cap">water to the root</span></div>
+      <div class="fact"><span class="num">2026–28</span><span class="cap">pilot period</span></div>
+    </div>
+  </div>
+  <svg class="mark" viewBox="0 0 132 188" aria-hidden="true">
+    <rect x="6" y="18" width="120" height="7" rx="3.5" fill="var(--water)"/>
+    <circle cx="30" cy="22" r="4.5" fill="var(--navy)"/><circle cx="66" cy="22" r="4.5" fill="var(--navy)"/><circle cx="102" cy="22" r="4.5" fill="var(--navy)"/>
+    <g class="drop"><path d="M30 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
+    <g class="drop"><path d="M66 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
+    <g class="drop"><path d="M102 32c3.4 4 5.6 6.8 5.6 9.4a5.6 5.6 0 0 1-11.2 0c0-2.6 2.2-5.4 5.6-9.4z" fill="var(--water)"/></g>
+    <rect x="0" y="118" width="132" height="2.6" fill="var(--earth)"/>
+    <ellipse cx="30" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
+    <ellipse cx="66" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
+    <ellipse cx="102" cy="140" rx="13" ry="20" fill="var(--water)" opacity=".26"/>
+    <path d="M30 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="28.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
+    <path d="M66 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="64.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
+    <path d="M102 118c-7-9 0-16 0-16s7 7 0 16z" fill="var(--leaf)"/><rect x="100.6" y="114" width="2.8" height="30" fill="var(--leaf)"/>
+  </svg>
+</div></div>
+
+<section id="problem"><div class="wrap two">
+  <div>
+    <span class="lbl">The problem</span>
+    <h2>In Karamoja, farming still waits for a rain that increasingly does not come.</h2>
+  </div>
+  <div class="prose">
+    <p>Households in Abim plant against two short, uncertain windows a year. When the rains fail or arrive late, a season is lost — and with it the food and the income it would have carried.</p>
+    <p>Irrigation is the obvious answer and the rarest one. Surface and flood methods, the ones most within reach, lose roughly four of every ten buckets to runoff, evaporation and drainage below the root. In a place where water is scarce and often carried by hand, that loss is the difference between a method that works and one that doesn't.</p>
+    <p>Young people leave because farming no longer pays. That is the gap this project is built in.</p>
+  </div>
+</div></section>
+
+<section id="approach"><div class="wrap two">
+  <div>
+    <span class="lbl">Approach</span>
+    <h2>Put the water at the root, and run it on the sun.</h2>
+    <div class="prose" style="margin-top:20px">
+      <p>Precision drip irrigation delivers water slowly, directly at the base of each plant, through emitters on lines running down every crop row. The soil between rows stays dry. Almost nothing is lost.</p>
+      <p>Solar panels drive the pump, so the system has no fuel cost and produces most when the sun is strongest — which is when crops need water most.</p>
+      <p>The gain is not marginal. It is the difference between delivering six buckets in ten and delivering nine.</p>
+    </div>
+  </div>
+  <div class="fig">
+    <div class="bars">
+      <div class="bar"><div class="track" style="height:60%"><div class="fill" style="height:100%;background:var(--earth)"></div><span class="pct">60%</span></div><div class="bname">Surface</div><div class="bsub">furrow, basin, flood</div></div>
+      <div class="bar"><div class="track" style="height:75%"><div class="fill" style="height:100%;background:var(--water)"></div><span class="pct">75%</span></div><div class="bname">Sprinkler</div><div class="bsub">overhead spray</div></div>
+      <div class="bar"><div class="track" style="height:90%"><div class="fill" style="height:100%;background:var(--leaf)"></div><span class="pct">90%</span></div><div class="bname">Drip</div><div class="bsub">emitter at the plant</div></div>
+    </div>
+    <p class="figcap">Field application efficiency — the share of water applied that actually reaches the crop root zone. Source: FAO, <em>Irrigation Water Management</em>, Table 8.</p>
+  </div>
+</div></section>
+
+<section id="pilot"><div class="wrap two">
+  <div>
+    <span class="lbl">The pilot</span>
+    <h2>A demonstration we run ourselves, at our own cost and risk.</h2>
+    <div class="prose" style="margin-top:20px">
+      <p>The system was built and tested as a prototype at the Makerere University botanical garden. It worked there. The question this pilot answers is whether it works in Abim soil, in Abim heat, on Abim water.</p>
+      <p>Oasis Centauri installs and operates the demonstration plot. Nothing about it is handed over during the pilot — not the land, the equipment or the systems. What transfers to the community is the skill, taught on a working installation rather than in a classroom.</p>
+    </div>
+  </div>
+  <div>
+    <table class="spec">
+      <tr><th>Location</th><td>Abim District, Karamoja, Uganda</td></tr>
+      <tr><th>Scale</th><td>2.5 acres · 5 × 0.5-acre systems</td></tr>
+      <tr><th>Method</th><td>Solar-powered precision drip</td></tr>
+      <tr><th>Components</th><td>Panels, batteries, pumps, filtration, PVC mains, laterals, emitters</td></tr>
+      <tr><th>Origin</th><td>Prototype, Makerere University</td></tr>
+      <tr><th>Pilot period</th><td>July 2026 – 2028</td></tr>
+      <tr><th>Support</th><td>UNDP · Youth4Climate Call for Solutions</td></tr>
+      <tr><th>Agreement</th><td>No. 10576419</td></tr>
+    </table>
+  </div>
+</div></section>
+
+<section id="progress"><div class="wrap">
+  <span class="lbl">Progress</span>
+  <h2 style="margin-bottom:30px">Four stages, delivered against a signed schedule.</h2>
+
+  <div class="stage">
+    <div class="sn">01</div>
+    <div><div class="sh">Community sensitisation and capacity building</div>
+      <div class="sd">Clearance secured from sub-county to village level. Youth mobilised across three neighbouring villages in one parish, and trained over two days on the principles of irrigation, solar drip systems and climate-smart agriculture. Abim, 30 September – 1 October 2026.</div></div>
+    <span class="chip done">Complete</span>
+  </div>
+
+  <div class="stage">
+    <div class="sn">02</div>
+    <div><div class="sh">Pre-installation</div>
+      <div class="sd">Technical team recruited, site surveyed and mapped, and land secured for the demonstration plot.</div></div>
+    <span class="chip next">By Nov 2027</span>
+  </div>
+
+  <div class="stage">
+    <div class="sn">03</div>
+    <div><div class="sh">Installation and commissioning</div>
+      <div class="sd">Five identical 0.5-acre solar-powered drip systems procured, installed and brought into operation across 2.5 acres.</div></div>
+    <span class="chip next">By Nov 2027</span>
+  </div>
+
+  <div class="stage">
+    <div class="sn">04</div>
+    <div><div class="sh">Monitoring, evaluation and scaling readiness</div>
+      <div class="sd">Digital monitoring of system performance and beneficiary outcomes, stakeholder assessment, and a scaling readiness guide drawn from what the pilot actually shows.</div></div>
+    <span class="chip next">By Apr 2028</span>
+  </div>
+</div></section>
+
+<section id="youth"><div class="wrap two">
+  <div>
+    <span class="lbl">Youth inclusion</span>
+    <h2>Training first. Ownership later, and only if it is earned by the evidence.</h2>
+  </div>
+  <div class="prose">
+    <p>Young people aged 18 to 30 from the host villages are trained on the system and then work on it hands-on, under supervision. The skill is theirs permanently, whatever happens to the pilot.</p>
+    <p>Those who wish to go further sign a founding members' register for a cooperative that may be formed once the pilot closes in 2028. Nothing about that cooperative is settled now — its leadership, member contributions and sharing of benefits will be decided by by-laws its own members write at formation.</p>
+    <p>We say this plainly in every village meeting, because a project that overpromises in its first season has nothing left to offer in its third.</p>
+  </div>
+</div></section>
+
+<section id="team"><div class="wrap">
+  <span class="lbl">Who we are</span>
+  <h2>A student project that went to the field.</h2>
+  <div class="prose" style="margin-top:18px">
+    <p>Oasis Centauri was founded by students of Makerere University, where the precision drip system was first built and tested. It is now implementing that prototype as a funded pilot in Karamoja.</p>
+  </div>
+  <div class="who">
+    <div><div class="pname">Brian Awany</div><div class="prole">Project Manager · Innovator</div><div class="pbio">Leads the project and holds the agreement with UNDP as named Innovator.</div></div>
+    <div><div class="pname">Koko Alex</div><div class="prole">Field Team Lead</div><div class="pbio">Runs operations on the ground in Abim and leads the youth training.</div></div>
+    <div><div class="pname">Field team</div><div class="prole">Agricultural extension</div><div class="pbio">Field assistants supporting mobilisation, facilitation and field data collection.</div></div>
+  </div>
+</div></section>
+
+<section id="contact" style="border-bottom:0"><div class="wrap">
+  <div class="cta">
+    <span class="lbl" style="color:#E8A82E">Contact</span>
+    <h2>Partners, funders and researchers — we would like to hear from you.</h2>
+    <p>We are open to technical collaboration, follow-on funding, and anyone studying smallholder irrigation in semi-arid East Africa.</p>
+    <div class="rows">
+      <div class="row"><span class="rk">Email</span><span class="rv" id="em">oasiscentauri@gmail.com</span><button class="btn" id="cp" type="button">Copy</button></div>
+      <div class="row"><span class="rk">Phone</span><span class="rv">+256 764 186 556 · +256 751 590 350</span></div>
+      <div class="row"><span class="rk">Based in</span><span class="rv">Kampala, Uganda</span></div>
+      <div class="row"><span class="rk">Social</span><span class="rv">X @OasisCentauri · Instagram oasiscentauri</span></div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <p class="fline">Oasis Centauri · Youth Precision Irrigation Project · Kampala, Uganda</p>
+  <p class="fline">Supported under the Youth4Climate Call for Solutions Innovation Challenge (UNDP) · Agreement No. 10576419</p>
+  <p class="fline" style="margin-top:12px;opacity:.8">The views expressed on this site are those of Oasis Centauri and do not necessarily reflect those of UNDP.</p>
+</div></footer>
+
+<script>
+document.getElementById('cp').addEventListener('click',function(){
+  var b=this,txt=document.getElementById('em').textContent.trim();
+  function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1800)}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(ok).catch(sel);
+  } else sel();
+  function sel(){
+    try{var r=document.createRange();r.selectNodeContents(document.getElementById('em'));
+      var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';
+      setTimeout(function(){b.textContent='Copy'},1800);}catch(e){}
+  }
+});
+</script>
+
+</body>
+</html>
